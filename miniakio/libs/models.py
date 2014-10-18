@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import pika
-
 class UserMixin(object):
 
     def get_user_by_id(self, id):
@@ -107,21 +105,6 @@ class PostMixin(object):
           published)
 
         return {"next": next_post, "prev": prev_post}
-
-    def send_post_change_nofity(self, post_id):
-      QUEUE_NAME = 'PostChange'
-      msg_content = post_id
-      connection = pika.BlockingConnection(pika.ConnectionParameters(
-              host='localhost'))
-      channel = connection.channel()
-
-      channel.queue_declare(queue=QUEUE_NAME)
-
-      channel.basic_publish(exchange='',
-                            routing_key=QUEUE_NAME,
-                            body=msg_content)
-      print '[x] Sent nofity for post id[%s]' % post_id
-      connection.close()
 
 class TagMixin(object):
 
