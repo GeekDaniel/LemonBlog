@@ -54,7 +54,7 @@ class AkioRender(m.HtmlRenderer, m.SmartyPants):
             ) % {'id': match.group(1)}
             return value
 
-        return '<a href="%s">%s</a>' % (link, title)
+        return '<a href="%s" target="_blank">%s</a>' % (link, title)
 
 
 def markdown(text):

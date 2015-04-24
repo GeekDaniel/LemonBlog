@@ -133,8 +133,7 @@ h2 {
 h2 small {
   font-size: 16px;
 }
-h3,
-h4 {
+h3 {
   color: #777;
   background-color: #F2F8F7;
   margin: 20px -20px;
@@ -142,6 +141,16 @@ h4 {
   padding: 0px 20px;
   line-height: 35px;
 }
+
+h4 {
+  color: #777;
+  background-color: #F2F8F7;
+  margin: 20px 0px;
+  font-size: 16px;
+  padding: 0px 5px;
+  line-height: 28px;
+}
+
 h3 small,
 h4 small {
   font-size: 18px;
@@ -222,7 +231,7 @@ pre {
   font-size: 12px;
 }
 code {
-  padding: 3px 4px;
+  /* padding: 3px 4px; */
   color: #EEEEEE;
   border-radius: 3px;
   -moz-border-radius: 3px;
@@ -413,11 +422,13 @@ body {
 #container {
   margin: 0 auto;
   margin-top: 60px;
-  width: 680px;
+  width: 800px; 
+/*  width: 680px; */
 }
 #main {
   padding: 20px 0;
-  min-height: 400px;
+  min-height: 750px;
+/*  min-height: 400px; */
   line-height: 1.4em;
 }
 .content {

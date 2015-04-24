@@ -4,7 +4,7 @@
     
     <section class="categories">
       {% for index, category in enumerate(dictCatePosts) %}
-      <h4 class="downarch">{{category}} +</h4>
+      <h3 class="downarch">{{category}} +</h3>
         {% if index == 0 %}
           <ul class="posts-list">
         {% else %}
@@ -29,7 +29,7 @@
 jQuery(document).ready(function($) {
     $(document).ready(function() {
         $(".categories ul.hidearch").hide();
-        $(".categories h4.downarch").click(function() {
+        $(".categories h3.downarch").click(function() {
             $(this).next().slideToggle('fast');
             return false;
         });

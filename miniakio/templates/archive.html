@@ -5,7 +5,7 @@
     <section class="archive">
       {% set i=0 %}
       {% for year_posts in archive_list(posts) %}
-      <h4 class="downarch">{{year_posts[0]}} +</h4>
+      <h3 class="downarch">{{year_posts[0]}} +</h3>
       {% set i=i+1 %}  
       {% if i <2 %}
         <ul class="posts-list">
@@ -38,7 +38,7 @@
 jQuery(document).ready(function($) {
     $(document).ready(function() {
         $(".archive ul.hidearch").hide();
-        $(".archive h4.downarch").click(function() {
+        $(".archive h3.downarch").click(function() {
             $(this).next().slideToggle('fast');
             return false;
         });
