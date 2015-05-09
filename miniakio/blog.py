@@ -10,6 +10,7 @@ from .libs.models import PostMixin, TagMixin
 from .libs.markdown import RenderMarkdownPost
 from .libs.utils import authenticated, signer_code
 from .libs.utils import unsigner_code, archive_list
+from .libs.utils import sortedDictByKey
 from blogconfig import PICKY_DIR
 
 
@@ -55,6 +56,7 @@ class CategoriesHandler(BaseHandler, PostMixin):
     @removeslash
     def get(self):
         dictCatePosts = {}
+        listCatePosts = []
         postsCount = 0
         categoryList = self.get_category_list()
 
@@ -66,7 +68,8 @@ class CategoriesHandler(BaseHandler, PostMixin):
             dictCatePosts[categoryRow.category] = postsCurrCategory
             postsCount += len(postsCurrCategory)
 
-        self.render("categories.html", dictCatePosts=dictCatePosts, count=postsCount)
+        listCatePosts = sortedDictByKey(dictCatePosts)
+        self.render("categories.html", listCatePosts=listCatePosts, count=postsCount)
 
 class FeedHandler(BaseHandler, PostMixin):
 

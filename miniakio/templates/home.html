@@ -43,7 +43,7 @@
         <ul class="home-list">
           {% for post in posts %}
           <li>
-            <span>{{get_show_time(post.published)}}</span> &raquo; 
+            <span>{{get_show_time(post.published)}} &raquo; </span>  
             <a href="/{{post.id}}.html">{{post.title}}</a>
           </li>
           {% end %}

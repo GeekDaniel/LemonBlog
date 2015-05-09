@@ -144,6 +144,7 @@ h3 {
 
 h4 {
   color: #777;
+  /* color: #f95b1f; */
   background-color: #F2F8F7;
   margin: 20px 0px;
   font-size: 16px;
@@ -179,6 +180,7 @@ ol {
 }
 li {
   line-height: 30px;
+  /* color: #f95b1f; */
 }
 hr {
   margin: 20px 0 19px;
@@ -455,6 +457,13 @@ body {
   margin: 31px auto;
   border: 0 none;
   border-top: 3px dotted #dededc;
+}
+.content article p {
+  font-family: "宋体", "Quantico", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, "微软雅黑", sans-serif !important;
+}
+.content article ul li {
+  font-family: "宋体", "Quantico", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, "微软雅黑", sans-serif !important;
+  line-height: 32px
 }
 .date-right {
   float: right;

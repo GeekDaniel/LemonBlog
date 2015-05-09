@@ -102,6 +102,10 @@ def unsigner_code(signer):
     else:
         return None
 
+# added by cheyo 2015-05-09 begin for sort dict by key
+def sortedDictByKey(d): 
+    return [(k,d[k]) for k in sorted(d.keys())]
+# added by cheyo 2015-05-09 end
 
 #Mobile Detect
 def is_mobile(user_agent):

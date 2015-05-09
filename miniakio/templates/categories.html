@@ -3,14 +3,14 @@
 {% block content %}
     
     <section class="categories">
-      {% for index, category in enumerate(dictCatePosts) %}
-      <h3 class="downarch">{{category}} +</h3>
+      {% for index, tupleCatePosts in enumerate(listCatePosts) %}
+      <h3 class="downarch">{{tupleCatePosts[0]}} +</h3>
         {% if index == 0 %}
           <ul class="posts-list">
         {% else %}
           <ul class="hidearch posts-list">
         {% end %}
-        {% for post in dictCatePosts[category] %}
+        {% for post in tupleCatePosts[1] %}
         <li class="archiveli">
           <span>{{get_home_time(post.published)}}</span><a href="/{{post.id}}.html">{{post.title}}</a>
         </li>
